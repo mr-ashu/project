@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css"/>
+</head>
+<style>
+     
+</style>
+<body>
+    <h1>Signup</h1>
+    <form id="form1">
+      <input type="text" id="name" placeholder="Inter Your name">
+      <input type="email" id="mail" placeholder="Inter Your mail">
+      <input type="number" id="mob" placeholder="Inter Your mob">
+      <input type="password" id="pass" placeholder="Create password">
+      <input type="password" id="cpass" placeholder=" Confirm Your password">
+      <input type="submit" id="sum" >
+
+    </form>
+</body>
+</html>
+<script>
+document.querySelector("#form1").addEventListener("submit",signupFun);
+ 
+function signupFun(){
+ event.preventDefault()
+var obj={
+    cname:form1.name.value,
+    cmail:form1.mail.value,
+    cmob:form1.mob.value,
+    cpass:form1.pass.value,
+    cnpass:form1.cpass.value,
+}
+ 
+  
+localStorage.setItem("cList",JSON.stringify(obj));
+window.location.href="login.html"
+
+
+
+}
+
+</script>
